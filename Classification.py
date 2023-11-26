@@ -1,16 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 # Ali Alzurufi
 # Professor Lauren
 # Date: November 6 2023
 # MCS 5223: Text Mining and Data Analytics
-
-
-# In[2]:
 
 
 import sklearn
@@ -19,9 +10,6 @@ import nltk
 import warnings 
 
 warnings.filterwarnings('ignore')
-
-
-# In[3]:
 
 
 import pickle 
@@ -38,11 +26,7 @@ with open("y_train.txt", "rb") as fp:
 with open("y_test.txt", "rb") as fp:
     y_test = pickle.load(fp)    
 
-
-# In[7]:
-
-
-# BASELINE
+# BASELINE 100 FEATURES
 
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.neighbors import KNeighborsClassifier
@@ -106,11 +90,7 @@ svm_predict = svm.predict(tfidfVectorTest)
 print("Support Machine Vector: ")
 print(classification_report(y_test, svm_predict, target_names = target_names))
 
-
-# In[12]:
-
-
-# BASELINE
+# BASELINE 200 FEATURES
 
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.neighbors import KNeighborsClassifier
@@ -176,8 +156,7 @@ print('Support Vector Machine: ')
 print(classification_report(y_test, svm_predict, target_names = target_names))
 
 
-# In[7]:
-
+# TEXT PROCESSING APPROACH
 
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.neighbors import KNeighborsClassifier
@@ -253,20 +232,4 @@ mlp_predict = mlpModel.predict(tfidfVectorTest.toarray())
 
 print('Multi-Layer Perceptron: ')
 print(classification_report(y_test, mlp_predict))
-
-
-# In[8]:
-
-
-# The F1 score seemed to improve slightly but after trying several methods, it did not go up 3%
-# Some preprocessing techqniques did hurt the score more than others so
-# it was more of a trial and error approach to determine which methods
-# produced a higher F1 score
-
-
-# In[ ]:
-
-
-# I have neither given nor recieved unauthorized aid in completing this work, nor have I presented
-# someone else's work as my own.
 
