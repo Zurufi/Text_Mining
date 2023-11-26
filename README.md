@@ -1,2 +1,2 @@
 # Text_Mining
-My text mining projects
+Here are some of the text mining projects I have worked on throughout the semester
