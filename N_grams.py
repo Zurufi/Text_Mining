@@ -55,9 +55,6 @@ model.train(toy_data)
 print(model.generate_sentence("on"))
 
 
-# In[2]:
-
-
 from collections import defaultdict, Counter
 import random
 
