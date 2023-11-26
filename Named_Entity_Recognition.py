@@ -19,9 +19,6 @@ def transformURLtoString(url):
 text = transformURLtoString('https://arstechnica.com/science/2021/09/ny-prepared-for-tens-of-thousands-of-unvaccinated-health-workers-to-lose-jobs/')
 
 
-# In[146]:
-
-
 import re
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
